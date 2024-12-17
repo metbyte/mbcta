@@ -14,8 +14,8 @@ const defaultConfig = {
     buttonColor: "white",
   },
   size: {
-    frameWidth: " min(100vw);",
-    frameHeight: " min(100vh);",
+    frameWidth: "100vw",
+    frameHeight: "100dvh",
   },
   baseUrl: "https://login.slimmerewebsite.nl/widget/",
   zIndexes: {
