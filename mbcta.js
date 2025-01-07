@@ -117,7 +117,7 @@ window.initChatWidget = function (customConfig) {
     }
     
     
-    span.chat-widget-text {
+    .chat-teaser {
         position: absolute;
         top: -18px;
         right: 0px;
@@ -131,6 +131,12 @@ window.initChatWidget = function (customConfig) {
         box-shadow: 0px 0px 40px -10px #00000029;
         animation: teeaser .5s ease-out forwards;
         animation-delay: 2s;
+    }
+
+        .chat-teaser.viewed {
+        transform: translateY(-200%) !important;
+        opacity: 0 !important;
+        transition: all .4s ease-out  !important;;
     }
     
     @keyframes teeaser {
@@ -230,6 +236,7 @@ window.initChatWidget = function (customConfig) {
   const openChat = () => {
     isOpen = true;
     frame.classList.add("visible");
+    teaser.classList.add("viewed");
     framebg.classList.add("visible");
     // Start sending OPEN_CHAT messages until acknowledged
     let retryCount = 0;
