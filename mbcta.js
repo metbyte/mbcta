@@ -1,4 +1,4 @@
-// Default configuratie
+// Default configuratie a
 const defaultConfig = {
   widgetId: "", // Verplicht parameter
   buttonPosition: {
