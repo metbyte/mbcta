@@ -231,6 +231,7 @@ window.initChatWidget = function (customConfig) {
   document.body.appendChild(frame);
 
   const openChat = () => {
+    console.log("open chat");
     isOpen = true;
     frame.classList.add("visible");
     teaser.classList.add("viewed");
@@ -258,6 +259,7 @@ window.initChatWidget = function (customConfig) {
   };
 
   const closeChat = () => {
+    console.log("close chat");
     isOpen = false;
     frame.classList.remove("visible");
     framebg.classList.remove("visible");
@@ -276,7 +278,17 @@ window.initChatWidget = function (customConfig) {
   // Event listeners
   button.addEventListener("click", toggleChat);
 
-  document.addEventListener("click", (event) => {
+  // document.addEventListener("click", (event) => {
+  //   if (
+  //     isOpen &&
+  //     !frame.contains(event.target) &&
+  //     !button.contains(event.target)
+  //   ) {
+  //     closeChat();
+  //   }
+  // });
+
+  framebg.addEventListener("click", (event) => {
     if (
       isOpen &&
       !frame.contains(event.target) &&
