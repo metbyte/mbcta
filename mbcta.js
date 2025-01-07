@@ -247,7 +247,7 @@ window.initChatWidget = function (customConfig) {
       }
     }, 100);
 
-    // Clear interval when app acknowledges
+    // Clear interval when app acknowledges a
     const handleAcknowledge = (event) => {
       if (event.data.type === "CHAT_OPENED") {
         clearInterval(retryInterval);
