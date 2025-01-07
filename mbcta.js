@@ -214,9 +214,6 @@ window.initChatWidget = function (customConfig) {
   framebg.className = "chat-widget-bg";
   document.body.appendChild(framebg);
 
-  console.log(config.teaser.toString().length);
-  console.log(config.teaser);
-
   // Maak teaser
 
   const teaser = document.createElement("div");
